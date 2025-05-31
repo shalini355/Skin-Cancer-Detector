@@ -49,6 +49,51 @@ Accuracy and loss graph after training
 Saved model as model.h5
 Sample prediction printed in the terminal
 
+📦 SKINCANCERAPP
+├── 📁 backend
+│   ├── 📁 model
+│   │   └── 📁 data
+│   │       └── 🧠 skin_cancer_model.h5
+│   ├── 🐍 app.py
+│   ├── 🐍 main.py
+│   ├── 🐍 predict.py
+│   ├── 📄 requirements.txt
+│   └── 🐍 tempCodeRunnerFile.py
+│
+├── 📁 frontend
+│   ├── 📁 node_modules
+│   ├── 📁 public
+│   │   ├── 🌐 favicon.ico
+│   │   ├── 🧾 index.html
+│   │   ├── 🖼️ logo192.png
+│   │   ├── 🖼️ logo512.png
+│   │   ├── 📄 manifest.json
+│   │   └── 📄 robots.txt
+│   │
+│   ├── 📁 src
+│   │   ├── 📁 components\store
+│   │   │   ├── 📸 CameraCapture.js
+│   │   │   ├── ℹ️  FAQSection.js
+│   │   │   ├── 🎨 HomePage.css
+│   │   │   ├── 🏠 HomePage.js
+│   │   │   ├── 🧭 Navbar.js
+│   │   │   ├── 📥 PDFDownload.js
+│   │   │   ├── 🔒 Privacy.js
+│   │   │   ├── 📊 Report.js
+│   │   │   ├── 🖼️ ShowImage.js
+│   │   │   └── 🧠 useImageStore.js
+│   │   │
+│   │   └── 📁 pages
+│   │       ├── ⚙️ App.js
+│   │       ├── 🏠 HomePage.js
+│   │       └── 🎨 index.css
+│
+├── 📄 .gitignore
+├── 📄 package-lock.json
+├── 📄 package.json
+└── 📄 README.md
+
+
 Author
 Name: Shalini Yadav
 Course: B.Tech CSE
