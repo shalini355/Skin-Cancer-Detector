@@ -1,0 +1,208 @@
+/* --- GENERAL PAGE --- */
+.home-page-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(79, 70, 229, 0.08);
+  padding: 2rem 1.5rem 0 1.5rem;
+  position: relative;
+}
+
+/* --- HEADER --- */
+header {
+  display: flex;
+  justify-content: center;   /* Center horizontally */
+  align-items: center;
+  padding: 24px 0 8px 0;     /* Remove left/right padding */
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+header h1 {
+  font-size: 2.2rem;
+  color: #a3243b;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* --- NAVBAR --- */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0 2rem 0;
+  flex-wrap: wrap;
+}
+.nav-link {
+  color: #a3243b;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-link:hover,
+.nav-link.active {
+  background: #ffe0ba;
+  color: #7c1b2d;
+  text-decoration: underline;
+}
+
+/* --- MAIN SECTIONS --- */
+main section {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(79, 70, 229, 0.06);
+  margin: 2rem 0;
+  padding: 2rem 1.5rem;
+  text-align: left;
+}
+main section h2 {
+  color: #a3243b;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+main section ul {
+  margin-left: 1.5rem;
+  color: #374151;
+  font-size: 1.05rem;
+}
+main section p {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+/* --- BUTTONS --- */
+.primary-btn, button, .faq-btn {
+  background: #a3243b;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 1.5rem;
+}
+.primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.primary-btn:hover, button:hover, .faq-btn:hover {
+  background: #7c1b2d;
+  color: #fff;
+}
+
+/* --- WAVE BACKGROUND --- */
+.wave-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 0;
+}
+
+/* --- SPLIT HERO (if used) --- */
+.split-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 350px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin: 2rem 0;
+  background: #ffe0ba;
+  gap: 2rem;
+}
+.split-hero-left {
+  flex: 1.2;
+  min-width: 300px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.split-hero-left h2 {
+  font-size: 2.2rem;
+  color: #a3243b;
+  margin-bottom: 1rem;
+}
+.split-hero-left p {
+  font-size: 1.15rem;
+  color: #333;
+}
+.split-hero-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 250px;
+}
+.split-hero-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin: 0 10px;
+}
+
+/* --- FAQ SECTION (if needed) --- */
+.faq-section {
+  margin: 2rem 0;
+}
+
+/* --- FOOTER --- */
+.footer {
+  background: #2b0a0a;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  border-radius: 1rem 1rem 0 0;
+  margin-top: 3rem;
+  text-align: left;
+}
+.footer-column {
+  max-width: 300px;
+  margin: 1rem;
+}
+.footer-column h4 {
+  margin-bottom: 10px;
+}
+.social-icons a {
+  margin: 0 5px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .home-page-container {
+    padding: 1rem 0.2rem 0 0.2rem;
+    max-width: 99vw;
+  }
+  main section, .split-hero, .split-hero-left, .split-hero-right {
+    padding: 1rem 0.5rem;
+  }
+  .split-hero {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  nav {
+    gap: 1rem;
+  }
+}
+
+body, .home-page-container, .report-container, .privacy-container, .faq-section, .split-hero, .primary-btn, .nav-link {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+}
+
+/* Default (light) styles ... */
