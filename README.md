@@ -49,6 +49,7 @@ Accuracy and loss graph after training
 Saved model as model.h5
 Sample prediction printed in the terminal
 
+Folder Structure:
 📦 SKINCANCERAPP
 ├── 📁 backend
 │   ├── 📁 model
