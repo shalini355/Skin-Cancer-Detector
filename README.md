@@ -48,6 +48,7 @@ REST API
 Tools
 Jupyter Notebook
 Git & GitHub
+
 🧠 Model Workflow
 Data Collection
 Imported HAM10000 dataset from Kaggle.
@@ -63,6 +64,7 @@ Accuracy and loss monitoring
 Validation dataset testing
 Deployment
 Integrated trained model with Flask backend API.
+
 🚀 Features
 Upload skin lesion images
 AI-based prediction system
@@ -91,6 +93,7 @@ skin-cancer-detector/
 ├── static/
 ├── templates/
 └── README.md
+
 ⚠️ Disclaimer
 
 This project is created for educational and research purposes only.
