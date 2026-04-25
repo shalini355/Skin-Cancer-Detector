@@ -1,119 +1,99 @@
-🩺 Skin Cancer Detection System
+# Skin Cancer Detection System
 
-A Machine Learning–based web application designed to detect potential skin cancer from dermatoscopic images using the HAM10000 dataset.
-The project demonstrates how Artificial Intelligence can assist early skin lesion analysis and support healthcare diagnostics.
+> CNN-based image classification for early skin lesion detection — trained on 10,000+ real medical images.
 
-📌 Project Overview
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-D00000?style=flat&logo=keras&logoColor=white)
 
-Skin cancer is one of the most common forms of cancer worldwide. Early detection significantly increases treatment success rates.
-This project applies machine learning and image classification techniques to analyze skin lesion images and predict possible cancer types.
+## Overview
 
-The system integrates a trained ML model with a web application backend to provide predictions based on uploaded images.
+This project applies deep learning to detect and classify skin lesions from dermatoscopic images. It was trained on the **HAM10000 dataset** — a benchmark dataset of 10,015 real-world skin lesion images across 7 diagnostic categories.
 
-🎯 Objectives
-Build an AI model for skin lesion classification
-Apply image preprocessing and feature extraction
-Integrate ML model with a backend API
-Demonstrate real-world healthcare AI application
-📂 Dataset
+Early detection of skin cancer significantly improves survival rates. This model aims to assist in faster, more accessible preliminary screening.
 
-This project uses the HAM10000 ("Human Against Machine with 10000 training images") dataset from Kaggle.
+## Model Performance
 
-Dataset Source:
-HAM10000 – Human Against Machine Dataset (Kaggle)
+| Metric | Result |
+|--------|--------|
+| Validation Accuracy | 85%+ |
+| Dataset Size | 10,015 images |
+| Classes | 7 lesion types |
+| Framework | TensorFlow / Keras |
 
-Dataset Details
-10,000+ dermatoscopic skin lesion images
-Multiple diagnostic categories including:
-Melanoma
-Melanocytic nevi
-Basal cell carcinoma
-Benign keratosis
-Dermatofibroma
-Vascular lesions
-Actinic keratoses
+## 7 Lesion Categories
 
-The dataset provides labeled medical images used for supervised learning.
+1. Melanocytic nevi (nv)
+2. Melanoma (mel)
+3. Benign keratosis (bkl)
+4. Basal cell carcinoma (bcc)
+5. Actinic keratosis (akiec)
+6. Vascular lesions (vasc)
+7. Dermatofibroma (df)
 
-⚙️ Tech Stack
-Programming & ML
-Python
-TensorFlow / Keras
-NumPy
-Pandas
-OpenCV
-Backend
-Flask
-REST API
-Tools
-Jupyter Notebook
-Git & GitHub
+## Tech Stack
 
-🧠 Model Workflow
-Data Collection
-Imported HAM10000 dataset from Kaggle.
-Data Preprocessing
-Image resizing and normalization
-Label encoding
-Train-test split
-Model Training
-CNN-based image classification model
-Feature extraction using deep learning layers
-Evaluation
-Accuracy and loss monitoring
-Validation dataset testing
-Deployment
-Integrated trained model with Flask backend API.
+- **Model:** Convolutional Neural Network (CNN) via TensorFlow/Keras
+- **Preprocessing:** Image augmentation, normalization, resizing
+- **Deployment:** Flask REST API
+- **Dataset:** HAM10000 (Harvard Dataverse)
 
-🚀 Features
-Upload skin lesion images
-AI-based prediction system
-Image preprocessing pipeline
-REST API integration
-Real-time classification results
-🛠️ Installation & Setup
-1️⃣ Clone Repository
-git clone https://github.com/your-username/skin-cancer-detector.git
-cd skin-cancer-detector
-2️⃣ Install Dependencies
+## Getting Started
+
+### Prerequisites
+- Python 3.8+
+- pip
+
+### Installation
+
+```bash
+git clone https://github.com/shalini355/Skin-Cancer-Detector.git
+cd Skin-Cancer-Detector
 pip install -r requirements.txt
-3️⃣ Run Backend Server
+```
+
+### Run the Flask API
+
+```bash
 python app.py
+```
 
-Server runs at:
+API runs at `http://localhost:5000`
 
-http://localhost:5000
-📊 Project Structure
-skin-cancer-detector/
-│
-├── dataset/
+### Predict via API
+
+Send a POST request with an image file:
+```bash
+curl -X POST -F "file=@skin_image.jpg" http://localhost:5000/predict
+```
+
+Response:
+```json
+{
+  "prediction": "Melanocytic nevi",
+  "confidence": 0.91
+}
+```
+
+## Dataset
+
+The **HAM10000** dataset is publicly available on Harvard Dataverse.
+> Tschandl, P., Rosendahl, C. & Kittler, H. The HAM10000 dataset, a large collection of multi-source dermatoscopic images of common pigmented skin lesions. Sci. Data 5, 180161 (2018).
+
+## Project Structure
+
+Skin-Cancer-Detector/
 ├── model/
-├── app.py
+│   ├── train.py          # Model training script
+│   └── model.h5          # Saved trained model
+├── app.py                # Flask API
 ├── requirements.txt
-├── static/
-├── templates/
 └── README.md
+## Disclaimer
 
-⚠️ Disclaimer
+This tool is for educational and research purposes only. It is not a substitute for professional medical diagnosis.
 
-This project is created for educational and research purposes only.
-It is not a medical diagnostic tool and should not replace professional medical advice.
+## Connect
 
-🤝 Contributing
-
-Contributions are welcome!
-
-Fork the repository
-Create a feature branch
-Commit your changes
-Submit a pull request
-📄 License
-
-This project is licensed under the MIT License — free to use and modify.
-
-👩‍💻 Author
-
-Shalini Yadav
-B.Tech CSE Student | AI & Full-Stack Developer
-
-GitHub: https://github.com/shalini355
+**Shalini Yadav** — [LinkedIn](https://linkedin.com/in/shaliniyadav-355abc) · [GitHub](https://github.com/shalini355)
